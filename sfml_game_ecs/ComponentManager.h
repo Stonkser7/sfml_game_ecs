@@ -1,9 +1,19 @@
 #ifndef COMPONENT_MANAGER_H
 #define COMPONENT_MANAGER_H
 
-using ComponentID = size_t;
 
-const size_t MAX_COMPONENTS = 16;
+
+enum ComponentID {
+	Position,
+	Rotation,
+	Direction,
+	Acceleration,
+	Speed,
+
+	Count			//keep it latest
+};
+
+const size_t MAX_COMPONENTS = ComponentID::Count;
 
 class ComponentManager
 {

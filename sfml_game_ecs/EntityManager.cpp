@@ -13,8 +13,24 @@ EntityID EntityManager::createEntity()
 
 	EntityID newEntity = m_availableEntities.front();
 
-	m_signature[newEntity];
+	m_engagedEntities[newEntity];
 	m_availableEntities.pop();
 
 	return newEntity;
+}
+
+/// <summary>
+/// 
+/// </summary>
+/// <param name="entity"></param>
+/// <param name="component"></param>
+/// <returns>True if component was assigned</returns>
+bool EntityManager::assignComponent(EntityID entity, ComponentID component)
+{
+	assert(m_engagedEntities.find(entity) != m_engagedEntities.end() && "EntityManager::assignComponent(): Requested entity doesn't available");
+
+	if (m_engagedEntities[entity][component]) return false;	//check if already assigned
+
+	m_engagedEntities[entity][component] = true;
+	return true;
 }
