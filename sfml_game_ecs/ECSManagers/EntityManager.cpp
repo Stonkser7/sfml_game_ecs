@@ -2,8 +2,8 @@
 
 EntityManager::EntityManager()
 {
-	for (size_t i = 0; i < MAX_ENTITIES; ++i) {
-		m_availableEntities.push(i);
+	for (EntityID id = 0; id < MAX_ENTITIES; ++id) {
+		m_availableEntities.push(id);
 	}
 }
 
@@ -12,10 +12,18 @@ EntityID EntityManager::createEntity()
 	assert(!m_availableEntities.empty() && "number of entities overflowed");
 
 	EntityID newEntity = m_availableEntities.front();
-	m_engagedEntities[newEntity];
+	m_usedEntities[newEntity];
 	m_availableEntities.pop();
 
 	return newEntity;
+}
+
+void EntityManager::destroyEntity(EntityID entity)
+{
+	assert(m_usedEntities.find(entity) != m_usedEntities.end() && "attempt to destroy unused entity");
+
+	m_usedEntities.erase(entity);
+	m_availableEntities.push(entity);
 }
 
 
@@ -25,13 +33,13 @@ EntityID EntityManager::createEntity()
 /// </summary>
 /// <param name="entity"></param>
 /// <param name="component"></param>
-/// <returns>True if component was assigned</returns>
+/// <returns>False if component is already assigned</returns>
 bool EntityManager::assignComponent(EntityID entity, ComponentID component)
 {
-	assert(m_engagedEntities.find(entity) != m_engagedEntities.end() && "EntityManager::assignComponent(): Requested entity doesn't available");
+	assert(m_usedEntities.find(entity) != m_usedEntities.end() && "EntityManager::assignComponent(): Requested entity doesn't used");
 
-	if (m_engagedEntities[entity][component]) return false;	//check if already assigned
+	if (m_usedEntities[entity][component]) return false;	//check if already assigned
 
-	m_engagedEntities[entity][component] = true;
+	m_usedEntities[entity][component] = true;
 	return true;
 }

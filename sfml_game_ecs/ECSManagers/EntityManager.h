@@ -30,7 +30,7 @@ public:
 	bool assignComponent(EntityID entity, ComponentID component);
 
 private:
-	std::unordered_map<EntityID, std::bitset<ComponentID::Count>> m_engagedEntities;
+	std::unordered_map<EntityID, std::bitset<ComponentID::Count>> m_usedEntities;
 
 	std::queue<EntityID> m_availableEntities;
 };
