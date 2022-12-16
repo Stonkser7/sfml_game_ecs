@@ -13,12 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\ECSManagers">
+      <UniqueIdentifier>{93f15718-ffdb-4742-ad2a-fe4f9fdfaca9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ECSManagers">
+      <UniqueIdentifier>{f89d1e69-fa81-46f1-aaef-a52b795217ca}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="EntityManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Tools.cpp">
@@ -27,15 +30,15 @@
     <ClCompile Include="Direction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ComponentManager.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="ECSManagers\ComponentManager.cpp">
+      <Filter>Source Files\ECSManagers</Filter>
+    </ClCompile>
+    <ClCompile Include="ECSManagers\EntityManager.cpp">
+      <Filter>Source Files\ECSManagers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Position.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="EntityManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Acceleration.h">
@@ -56,8 +59,11 @@
     <ClInclude Include="Direction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ComponentManager.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="ECSManagers\ComponentManager.h">
+      <Filter>Header Files\ECSManagers</Filter>
+    </ClInclude>
+    <ClInclude Include="ECSManagers\EntityManager.h">
+      <Filter>Header Files\ECSManagers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

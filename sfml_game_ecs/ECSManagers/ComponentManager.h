@@ -13,8 +13,6 @@ enum ComponentID {
 	Count			//keep it latest
 };
 
-const size_t MAX_COMPONENTS = ComponentID::Count;
-
 class ComponentManager
 {
 public:

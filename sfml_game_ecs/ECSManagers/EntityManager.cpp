@@ -12,12 +12,13 @@ EntityID EntityManager::createEntity()
 	assert(!m_availableEntities.empty() && "number of entities overflowed");
 
 	EntityID newEntity = m_availableEntities.front();
-
 	m_engagedEntities[newEntity];
 	m_availableEntities.pop();
 
 	return newEntity;
 }
+
+
 
 /// <summary>
 /// 
