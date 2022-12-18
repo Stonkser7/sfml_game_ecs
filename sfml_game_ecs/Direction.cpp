@@ -1,5 +1,7 @@
 #include "Direction.h"
 
+Direction::Direction() :m_dir() {}
+
 Direction::Direction(const sf::Vector2f& vec)
 {
 	m_dir = tool::normalized(vec);

@@ -4,13 +4,13 @@
 #include <bitset>
 #include <unordered_map>
 #include <queue>
-#include "ComponentManager.h"
+
+#include "Entity.h"
+#include "Component.h"
 
 #include <cassert>
 
 #include <SFML/Graphics.hpp>
-
-using EntityID = size_t;
 
 const size_t MAX_ENTITIES = 30;
 

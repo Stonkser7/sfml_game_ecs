@@ -8,6 +8,7 @@
 class Direction
 {
 public:
+	Direction();
 	Direction(const sf::Vector2f& vec);
 	Direction(const Direction& dir);
 

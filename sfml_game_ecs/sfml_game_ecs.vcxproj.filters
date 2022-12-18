@@ -30,10 +30,19 @@
     <ClCompile Include="Direction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ECSManagers\ComponentManager.cpp">
+    <ClCompile Include="ECSManagers\BaseSystem.cpp">
       <Filter>Source Files\ECSManagers</Filter>
     </ClCompile>
-    <ClCompile Include="ECSManagers\EntityManager.cpp">
+    <ClCompile Include="EntityManager.cpp">
+      <Filter>Source Files\ECSManagers</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentManager.cpp">
+      <Filter>Source Files\ECSManagers</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseSystem.cpp">
+      <Filter>Source Files\ECSManagers</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentArray.cpp">
       <Filter>Source Files\ECSManagers</Filter>
     </ClCompile>
   </ItemGroup>
@@ -59,11 +68,26 @@
     <ClInclude Include="Direction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ECSManagers\ComponentManager.h">
+    <ClInclude Include="ECSManagers\ComponentArray.h">
       <Filter>Header Files\ECSManagers</Filter>
     </ClInclude>
-    <ClInclude Include="ECSManagers\EntityManager.h">
+    <ClInclude Include="ComponentManager.h">
       <Filter>Header Files\ECSManagers</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityManager.h">
+      <Filter>Header Files\ECSManagers</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseSystem.h">
+      <Filter>Header Files\ECSManagers</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Header Files\ECSManagers</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header Files\ECSManagers</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentArray.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
