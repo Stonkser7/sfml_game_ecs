@@ -149,7 +149,6 @@
     <ClCompile Include="BaseSystem.cpp" />
     <ClCompile Include="ComponentArray.cpp" />
     <ClCompile Include="ComponentManager.cpp" />
-    <ClCompile Include="ECSManagers\BaseSystem.cpp" />
     <ClCompile Include="Direction.cpp" />
     <ClCompile Include="EntityManager.cpp" />
     <ClCompile Include="main.cpp" />
