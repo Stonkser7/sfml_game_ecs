@@ -7,6 +7,7 @@
 #include <assert.h>
 
 #include "Entity.h"
+#include "Direction.h"
 
 template <typename T>
 class ComponentArray
