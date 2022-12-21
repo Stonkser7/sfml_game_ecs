@@ -14,6 +14,7 @@ int main()
 	shape.setOutlineThickness(-1);
 	shape.setPosition(window.getSize().x / 2.f, window.getSize().y / 2.f);
 
+
 	while (window.isOpen()) {
 		sf::Event event;
 		while (window.pollEvent(event)) {

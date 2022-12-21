@@ -8,9 +8,10 @@
 
 #include "Entity.h"
 #include "Direction.h"
+#include "IComponentArray.h"
 
 template <typename T>
-class ComponentArray
+class ComponentArray : public IComponentArray 
 {
 public:
 

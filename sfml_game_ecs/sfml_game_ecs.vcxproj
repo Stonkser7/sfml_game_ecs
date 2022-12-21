@@ -151,6 +151,7 @@
     <ClCompile Include="ComponentManager.cpp" />
     <ClCompile Include="Direction.cpp" />
     <ClCompile Include="EntityManager.cpp" />
+    <ClCompile Include="IComponentArray.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Tools.cpp" />
   </ItemGroup>
@@ -161,10 +162,10 @@
     <ClInclude Include="Component.h" />
     <ClInclude Include="ComponentArray.h" />
     <ClInclude Include="ComponentManager.h" />
-    <ClInclude Include="ECSManagers\ComponentArray.h" />
     <ClInclude Include="Direction.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="EntityManager.h" />
+    <ClInclude Include="IComponentArray.h" />
     <ClInclude Include="Position.h" />
     <ClInclude Include="Rotation.h" />
     <ClInclude Include="Speed.h" />
