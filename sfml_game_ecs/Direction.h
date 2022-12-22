@@ -1,5 +1,4 @@
-#ifndef DIRECTION_H
-#define DIRECTION_H
+#pragma once
 
 #include <SFML/Graphics.hpp>
 #include "Tools.h"
@@ -20,5 +19,3 @@ public:
 private:
 	sf::Vector2f m_dir;
 };
-
-#endif

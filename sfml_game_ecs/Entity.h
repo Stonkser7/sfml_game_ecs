@@ -1,6 +1,3 @@
-#ifndef ENTITY_H
-#define ENTITY_H
+#pragma once
 
 using EntityID = size_t;
-
-#endif

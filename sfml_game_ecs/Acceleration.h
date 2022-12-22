@@ -1,6 +1,3 @@
-#ifndef ACCELERATION_H
-#define ACCELERATION_H
+#pragma once
 
 using Acceleration = float;
-
-#endif

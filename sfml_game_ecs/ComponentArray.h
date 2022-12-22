@@ -1,5 +1,4 @@
-#ifndef COMPONENT_ARRAY_H
-#define COMPONENT_ARRAY_H
+#pragma once
 
 #include <vector>
 #include <unordered_map>
@@ -7,7 +6,6 @@
 #include <assert.h>
 
 #include "Entity.h"
-#include "Direction.h"
 #include "IComponentArray.h"
 
 template <typename T>
@@ -28,8 +26,6 @@ private:
 
 	std::unordered_map<size_t, EntityID> m_IndexToEntity;
 };
-
-#endif
 
 template<typename T>
 inline T& ComponentArray<T>::getData(EntityID entity)

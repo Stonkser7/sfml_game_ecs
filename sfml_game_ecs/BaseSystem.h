@@ -1,5 +1,4 @@
-#ifndef BASE_SYSTEM_H
-#define BASE_SYSTEM_H
+#pragma once
 
 
 class BaseSystem
@@ -10,5 +9,3 @@ public:
 private:
 
 };
-
-#endif

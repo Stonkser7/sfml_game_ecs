@@ -1,5 +1,4 @@
-#ifndef COMPONENT_H
-#define COMPONENT_H
+#pragma once
 
 enum ComponentID {
 	Position,
@@ -10,5 +9,3 @@ enum ComponentID {
 
 	Count			//keep it latest
 };
-
-#endif

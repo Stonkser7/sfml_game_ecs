@@ -1,11 +1,8 @@
-#ifndef I_COMPONENT_ARRAY_H
-#define I_COMPONENT_ARRAY_H
+#pragma once
 
 
-class IComponentArray //providing to store objects of generic derived class in a containers
+class IComponentArray //allows storing objects of generic derived class in a containers using pointers
 {
 public:
 	IComponentArray() = delete;
 };
-
-#endif
