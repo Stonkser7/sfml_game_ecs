@@ -1,5 +1,4 @@
-#ifndef COMPONENT_MANAGER_H
-#define COMPONENT_MANAGER_H
+#pragma once
 
 #include <unordered_map>
 #include <memory>
@@ -9,6 +8,8 @@
 #include "Component.h"
 #include "ComponentArray.h"
 #include "IComponentArray.h"
+
+#include "Direction.h"
 
 using ComponentName = std::string;
 
@@ -20,6 +21,9 @@ public:
 
 	template <typename T>
 	void assignComponent(EntityID entity);
+
+	template <typename T>
+	void removeComponent(EntityID entity);
 
 	template <typename T>
 	T& getComponent(EntityID entity);
@@ -39,7 +43,7 @@ inline void ComponentManager::registerComponent()
 {
 	assert(m_components.find(typeid(T).name()) == m_components.end() && "attempt to register existent component");
 
-	m_components.insert({ typeid(T).name(), std::make_shared<ComponentArray<T>>()});
+	m_components.insert({ typeid(T).name(), std::make_shared<ComponentArray<T>>() });
 
 }
 
@@ -52,11 +56,19 @@ inline void ComponentManager::assignComponent(EntityID entity)
 }
 
 template<typename T>
+inline void ComponentManager::removeComponent(EntityID entity)
+{
+	assert(m_components.find(typeid(T).name()) != m_components.end() && "attempt to remove non-registered component");
+
+	getComponentArray<T>()->removeData(entity);
+}
+
+template<typename T>
 inline T& ComponentManager::getComponent(EntityID entity)
 {
 	assert(m_components.find(typeid(T).name()) != m_components.end() && "attempt to get non-registered component");
 
-	getComponentArray<T>()->getData(entity);
+	return getComponentArray<T>()->getData(entity);
 }
 
 template<typename T>
@@ -64,5 +76,3 @@ inline std::shared_ptr<ComponentArray<T>> ComponentManager::getComponentArray()
 {
 	return static_pointer_cast<ComponentArray<T>>(m_components[typeid(T).name()]);
 }
-
-#endif
