@@ -153,6 +153,7 @@
     <ClCompile Include="EntityManager.cpp" />
     <ClCompile Include="IComponentArray.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SystemManager.cpp" />
     <ClCompile Include="Tools.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -168,7 +169,9 @@
     <ClInclude Include="IComponentArray.h" />
     <ClInclude Include="Position.h" />
     <ClInclude Include="Rotation.h" />
+    <ClInclude Include="Signature.h" />
     <ClInclude Include="Speed.h" />
+    <ClInclude Include="SystemManager.h" />
     <ClInclude Include="Tools.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

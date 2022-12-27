@@ -45,6 +45,9 @@
     <ClCompile Include="IComponentArray.cpp">
       <Filter>Source Files\ECSManagers</Filter>
     </ClCompile>
+    <ClCompile Include="SystemManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Position.h">
@@ -87,6 +90,12 @@
       <Filter>Header Files\ECSManagers</Filter>
     </ClInclude>
     <ClInclude Include="IComponentArray.h">
+      <Filter>Header Files\ECSManagers</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Signature.h">
       <Filter>Header Files\ECSManagers</Filter>
     </ClInclude>
   </ItemGroup>

@@ -9,8 +9,6 @@
 #include "ComponentArray.h"
 #include "IComponentArray.h"
 
-#include "Direction.h"
-
 using ComponentName = std::string;
 
 class ComponentManager
@@ -44,13 +42,12 @@ inline void ComponentManager::registerComponent()
 	assert(m_components.find(typeid(T).name()) == m_components.end() && "attempt to register existent component");
 
 	m_components.insert({ typeid(T).name(), std::make_shared<ComponentArray<T>>() });
-
 }
 
 template<typename T>
 inline void ComponentManager::assignComponent(EntityID entity)
 {
-	assert(m_components.find(typeid(T).name()) != m_components.end() && "attempt to assign non-registered component");
+	assert(m_components.find(typeid(T).name()) != m_components.end() && "attempt to assign unregistered component");
 
 	getComponentArray<T>()->createData(entity);
 }
@@ -58,7 +55,7 @@ inline void ComponentManager::assignComponent(EntityID entity)
 template<typename T>
 inline void ComponentManager::removeComponent(EntityID entity)
 {
-	assert(m_components.find(typeid(T).name()) != m_components.end() && "attempt to remove non-registered component");
+	assert(m_components.find(typeid(T).name()) != m_components.end() && "attempt to remove unregistered component");
 
 	getComponentArray<T>()->removeData(entity);
 }
@@ -66,7 +63,7 @@ inline void ComponentManager::removeComponent(EntityID entity)
 template<typename T>
 inline T& ComponentManager::getComponent(EntityID entity)
 {
-	assert(m_components.find(typeid(T).name()) != m_components.end() && "attempt to get non-registered component");
+	assert(m_components.find(typeid(T).name()) != m_components.end() && "attempt to get unregistered component");
 
 	return getComponentArray<T>()->getData(entity);
 }

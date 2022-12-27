@@ -6,6 +6,7 @@
 
 #include "Entity.h"
 #include "Component.h"
+#include "Signature.h"
 
 #include <cassert>
 
@@ -29,7 +30,7 @@ public:
 	bool assignComponent(EntityID entity, ComponentID component);
 
 private:
-	std::unordered_map<EntityID, std::bitset<ComponentID::Count>> m_usedEntities;
+	std::unordered_map<EntityID, Signature> m_usedEntities;
 
 	std::queue<EntityID> m_availableEntities;
 };
