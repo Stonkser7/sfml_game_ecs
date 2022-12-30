@@ -150,23 +150,26 @@
     <ClCompile Include="ComponentArray.cpp" />
     <ClCompile Include="ComponentManager.cpp" />
     <ClCompile Include="Direction.cpp" />
+    <ClCompile Include="ECSManager.cpp" />
     <ClCompile Include="EntityManager.cpp" />
     <ClCompile Include="IComponentArray.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MoveSystem.cpp" />
     <ClCompile Include="SystemManager.cpp" />
     <ClCompile Include="Tools.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Acceleration.h" />
-    <ClInclude Include="AccelerationSystem.h" />
     <ClInclude Include="BaseSystem.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="ComponentArray.h" />
     <ClInclude Include="ComponentManager.h" />
     <ClInclude Include="Direction.h" />
+    <ClInclude Include="ECSManager.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="EntityManager.h" />
     <ClInclude Include="IComponentArray.h" />
+    <ClInclude Include="MoveSystem.h" />
     <ClInclude Include="Position.h" />
     <ClInclude Include="Rotation.h" />
     <ClInclude Include="Signature.h" />

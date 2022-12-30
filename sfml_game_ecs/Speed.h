@@ -1,6 +1,3 @@
-#ifndef SPEED_H
-#define SPEED_H
+#pragma once
 
 using Speed = float;
-
-#endif

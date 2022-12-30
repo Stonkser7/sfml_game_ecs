@@ -1,6 +1,5 @@
 #pragma once
 
-#include <bitset>
 #include <unordered_map>
 #include <queue>
 
@@ -9,8 +8,6 @@
 #include "Signature.h"
 
 #include <cassert>
-
-#include <SFML/Graphics.hpp>
 
 const size_t MAX_ENTITIES = 30;
 
@@ -29,6 +26,9 @@ public:
 
 	bool assignComponent(EntityID entity, ComponentID component);
 
+	bool removeComponent(EntityID entity, ComponentID component);
+
+	Signature& getSignature(EntityID entity);
 private:
 	std::unordered_map<EntityID, Signature> m_usedEntities;
 

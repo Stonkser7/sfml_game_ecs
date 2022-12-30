@@ -46,6 +46,12 @@
       <Filter>Source Files\ECSManagers</Filter>
     </ClCompile>
     <ClCompile Include="SystemManager.cpp">
+      <Filter>Source Files\ECSManagers</Filter>
+    </ClCompile>
+    <ClCompile Include="ECSManager.cpp">
+      <Filter>Source Files\ECSManagers</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -63,9 +69,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Speed.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AccelerationSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Direction.h">
@@ -92,11 +95,17 @@
     <ClInclude Include="IComponentArray.h">
       <Filter>Header Files\ECSManagers</Filter>
     </ClInclude>
-    <ClInclude Include="SystemManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Signature.h">
       <Filter>Header Files\ECSManagers</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemManager.h">
+      <Filter>Header Files\ECSManagers</Filter>
+    </ClInclude>
+    <ClInclude Include="ECSManager.h">
+      <Filter>Header Files\ECSManagers</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveSystem.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

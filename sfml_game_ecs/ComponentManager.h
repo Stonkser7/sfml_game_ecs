@@ -23,6 +23,8 @@ public:
 	template <typename T>
 	void removeComponent(EntityID entity);
 
+	void removeAllComponents(EntityID entity);
+
 	template <typename T>
 	T& getComponent(EntityID entity);
 
@@ -39,7 +41,7 @@ private:
 template<typename T>
 inline void ComponentManager::registerComponent()
 {
-	assert(m_components.find(typeid(T).name()) == m_components.end() && "attempt to register existent component");
+	assert(m_components.find(typeid(T).name()) == m_components.end() && "ComponentManager: attempt to register already registered component");
 
 	m_components.insert({ typeid(T).name(), std::make_shared<ComponentArray<T>>() });
 }

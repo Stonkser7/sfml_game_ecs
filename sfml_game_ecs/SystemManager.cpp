@@ -7,9 +7,16 @@ void SystemManager::update()
 	}
 }
 
-void SystemManager::entitySignatureChecking(EntityID entity, const Signature& signature)
+void SystemManager::entitySignatureUpdated(EntityID entity, const Signature& signature)
 {
 	for (auto& s : m_systems) {
-		s->signatureMatchingCheck(entity, signature);
+		s->checkForMatching(entity, signature);
+	}
+}
+
+void SystemManager::entityDestroyed(EntityID entity)
+{
+	for (auto &s : m_systems) {
+		s->removeEntity(entity);
 	}
 }

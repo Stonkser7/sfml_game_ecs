@@ -43,3 +43,26 @@ bool EntityManager::assignComponent(EntityID entity, ComponentID component)
 	m_usedEntities[entity][component] = true;
 	return true;
 }
+
+/// <summary>
+/// 
+/// </summary>
+/// <param name="entity"></param>
+/// <param name="component"></param>
+/// <returns>False if nothing to remove</returns>
+bool EntityManager::removeComponent(EntityID entity, ComponentID component)
+{
+	assert(m_usedEntities.find(entity) != m_usedEntities.end() && "EntityManager::removeComponent(): Requested entity doesn't used");
+
+	if (!m_usedEntities[entity][component]) return false;	//check if nothing to remove
+
+	m_usedEntities[entity][component] = false;
+	return true;
+}
+
+Signature& EntityManager::getSignature(EntityID entity)
+{
+	assert(m_usedEntities.find(entity) != m_usedEntities.end() && "EntityManager: attempt to get signature of unused entity");
+
+	return m_usedEntities[entity];
+}

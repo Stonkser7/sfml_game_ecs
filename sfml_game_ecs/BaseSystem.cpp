@@ -5,7 +5,12 @@ void BaseSystem::setSignature(const Signature& signature)
 	m_signature = signature;
 }
 
-void BaseSystem::signatureMatchingCheck(EntityID entity, const Signature& signature)
+BaseSystem::BaseSystem(ECSManager* ecs_manager)
+{
+	m_ecs_manager = ecs_manager;
+}
+
+void BaseSystem::checkForMatching(EntityID entity, const Signature& signature)
 {
 	if ((signature & m_signature) == m_signature) {
 		assignEntity(entity);

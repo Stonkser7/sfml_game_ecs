@@ -1,8 +1,5 @@
-#ifndef POSITION_H
-#define POSITION_H
+#pragma once
 
 #include <SFML/Graphics.hpp>
 
 using Position = sf::Vector2f;
-
-#endif

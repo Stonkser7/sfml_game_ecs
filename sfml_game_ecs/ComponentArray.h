@@ -17,8 +17,9 @@ public:
 
 	void createData(EntityID entity);
 
-	void removeData(EntityID entity);
+	void removeData(EntityID entity) override;
 
+	bool isAssigned(EntityID entity) override;
 private:
 	std::vector<T> m_components;
 
@@ -61,4 +62,10 @@ inline void ComponentArray<T>::removeData(EntityID entity)
 	m_EntityToIndex.erase(entity);
 	m_IndexToEntity.erase(last_i);
 	m_components.pop_back();
+}
+
+template<typename T>
+inline bool ComponentArray<T>::isAssigned(EntityID entity)
+{
+	return m_EntityToIndex.find(entity) != m_EntityToIndex.end();
 }

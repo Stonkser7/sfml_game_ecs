@@ -16,7 +16,8 @@ public:
 	template <typename T>
 	void addSystem();
 
-	void entitySignatureChecking(EntityID entity, const Signature& signature);
+	void entitySignatureUpdated(EntityID entity, const Signature& signature);
+	void entityDestroyed(EntityID entity);
 private:
 	std::vector<std::shared_ptr<BaseSystem>> m_systems;
 };
