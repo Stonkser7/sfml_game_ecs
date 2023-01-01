@@ -54,6 +54,12 @@
     <ClCompile Include="MoveSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SystemOnDraw.cpp">
+      <Filter>Source Files\ECSManagers</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemOnUpdate.cpp">
+      <Filter>Source Files\ECSManagers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Position.h">
@@ -106,6 +112,12 @@
     </ClInclude>
     <ClInclude Include="MoveSystem.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemOnDraw.h">
+      <Filter>Header Files\ECSManagers</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemOnUpdate.h">
+      <Filter>Header Files\ECSManagers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

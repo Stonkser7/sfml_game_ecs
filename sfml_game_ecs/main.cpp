@@ -1,7 +1,7 @@
 
 #include <SFML/Graphics.hpp>
 
-
+#include <vector>
 
 int main()
 {
@@ -14,6 +14,8 @@ int main()
 	shape.setOutlineThickness(-1);
 	shape.setPosition(window.getSize().x / 2.f, window.getSize().y / 2.f);
 
+	std::vector<sf::RenderWindow> windows;
+	windows.emplace_back();
 
 	while (window.isOpen()) {
 		sf::Event event;

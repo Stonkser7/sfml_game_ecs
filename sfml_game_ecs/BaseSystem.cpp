@@ -1,14 +1,10 @@
 #include "BaseSystem.h"
 
-void BaseSystem::setSignature(const Signature& signature)
+BaseSystem::BaseSystem()
 {
-	m_signature = signature;
+	specifySignature();
 }
 
-BaseSystem::BaseSystem(ECSManager* ecs_manager)
-{
-	m_ecs_manager = ecs_manager;
-}
 
 void BaseSystem::checkForMatching(EntityID entity, const Signature& signature)
 {

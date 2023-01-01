@@ -18,3 +18,13 @@ void ECSManager::destroyEntity(EntityID entity)
 	m_component_manager->removeAllComponents(entity);
 	m_system_manager->entityDestroyed(entity);
 }
+
+void ECSManager::onUpdate()
+{
+	m_system_manager->update();
+}
+
+void ECSManager::onDraw()
+{
+	m_system_manager->draw();
+}

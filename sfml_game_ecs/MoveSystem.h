@@ -1,10 +1,15 @@
 #pragma once
 
-#include "BaseSystem.h"
 
-class MoveSystem : public BaseSystem
+#include "Component.h"
+#include "SystemOnUpdate.h"
+
+class ECSManager;
+
+class MoveSystem : public SystemOnUpdate
 {
 public:
-
+	MoveSystem(ECSManager& manager);
 	void update() override;
+	void specifySignature() override;
 };

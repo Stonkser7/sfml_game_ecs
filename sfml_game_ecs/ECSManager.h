@@ -21,7 +21,10 @@ public:
 	void registerComponent(ComponentID component_id);
 
 	template <typename T>
-	void addSystem();
+	void addSystemOnUpdate();
+
+	template <typename T>
+	void addSystemOnDraw(sf::RenderWindow& window);
 
 	template <typename T>
 	bool assignComponent(EntityID entity);
@@ -31,6 +34,9 @@ public:
 
 	template <typename T>
 	T& getComponent(EntityID entity);
+
+	void onUpdate();
+	void onDraw();
 private:
 	std::unique_ptr<EntityManager> m_entity_manager;
 	std::unique_ptr<ComponentManager> m_component_manager;
@@ -49,9 +55,15 @@ inline void ECSManager::registerComponent(ComponentID component_id)
 }
 
 template<typename T>
-inline void ECSManager::addSystem()
+inline void ECSManager::addSystemOnUpdate()
 {
-	m_system_manager->addSystem<T>();
+	m_system_manager->addSystemOnUpdate<T>(*this);
+}
+
+template<typename T>
+inline void ECSManager::addSystemOnDraw(sf::RenderWindow& window)
+{
+	m_system_manager->addSystemOnDraw<T>(*this, window);
 }
 
 template<typename T>

@@ -5,24 +5,18 @@
 
 #include <unordered_set>
 
-class ECSManager;
-
-class BaseSystem //allows storing objects of generic derived classes in a container using pointers
-{
+class BaseSystem {
 public:
-	BaseSystem() = delete;
-	explicit BaseSystem(ECSManager* ecs_manager);
-
-	virtual void update() = 0;
+	BaseSystem(BaseSystem&) = delete;
 
 	void checkForMatching(EntityID entity, const Signature& signature);
 	void removeEntity(EntityID entity);
 protected:
-	void setSignature(const Signature& signature);
+	BaseSystem();
+	virtual void specifySignature() = 0;
 
 	std::unordered_set<EntityID> m_entities;
-	Signature m_signature;	//each derived class must specify it in constructor
-	ECSManager* m_ecs_manager;
+	Signature m_signature;		//each derived class must specify it in constructor
 private:
 	void assignEntity(EntityID entity);
 };
