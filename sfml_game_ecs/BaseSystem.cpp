@@ -1,11 +1,5 @@
 #include "BaseSystem.h"
 
-BaseSystem::BaseSystem()
-{
-	specifySignature();
-}
-
-
 void BaseSystem::checkForMatching(EntityID entity, const Signature& signature)
 {
 	if ((signature & m_signature) == m_signature) {

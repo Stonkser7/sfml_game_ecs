@@ -25,15 +25,18 @@
     <Filter Include="Header Files\ECS\Managers">
       <UniqueIdentifier>{8965e2cc-a5b0-4d07-8b97-1f47d810c6a7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Components">
+      <UniqueIdentifier>{d87ab45b-df67-44b2-b252-798d75874951}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Components">
+      <UniqueIdentifier>{aa545cb1-84e7-48ed-b8d0-5f26d0c94179}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Tools.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Direction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="BaseSystem.cpp">
@@ -45,10 +48,10 @@
     <ClCompile Include="IComponentArray.cpp">
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
-    <ClCompile Include="MoveSystem.cpp">
+    <ClCompile Include="SMove.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SystemOnDraw.cpp">
+    <ClCompile Include="SystemOnRender.cpp">
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
     <ClCompile Include="SystemOnUpdate.cpp">
@@ -69,24 +72,15 @@
     <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SDraw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CDirection.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Position.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Acceleration.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Rotation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Tools.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Speed.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Direction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="BaseSystem.h">
@@ -107,10 +101,10 @@
     <ClInclude Include="Signature.h">
       <Filter>Header Files\ECS</Filter>
     </ClInclude>
-    <ClInclude Include="MoveSystem.h">
+    <ClInclude Include="SMove.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SystemOnDraw.h">
+    <ClInclude Include="SystemOnRender.h">
       <Filter>Header Files\ECS</Filter>
     </ClInclude>
     <ClInclude Include="SystemOnUpdate.h">
@@ -131,5 +125,31 @@
     <ClInclude Include="Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDraw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CAcceleration.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CDirection.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CPosition.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CRotation.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CSpeed.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CSprite.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Textures\basePlayerTexture.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

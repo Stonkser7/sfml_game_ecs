@@ -12,11 +12,10 @@ public:
 	void checkForMatching(EntityID entity, const Signature& signature);
 	void removeEntity(EntityID entity);
 protected:
-	BaseSystem();
-	virtual void specifySignature() = 0;
+	BaseSystem() {};
 
 	std::unordered_set<EntityID> m_entities;
-	Signature m_signature;		//each derived class must specify it in constructor
+	Signature m_signature;						//each system class must specify it
 private:
 	void assignEntity(EntityID entity);
 };

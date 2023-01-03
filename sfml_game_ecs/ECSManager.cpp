@@ -25,7 +25,7 @@ void ECSManager::onUpdate()
 	m_system_manager->update();
 }
 
-void ECSManager::onDraw()
+void ECSManager::onRender()
 {
-	m_system_manager->draw();
+	m_system_manager->render();
 }

@@ -24,7 +24,7 @@ public:
 	void addSystemOnUpdate();
 
 	template <typename T>
-	void addSystemOnDraw(sf::RenderWindow& window);
+	void addSystemOnRender(sf::RenderWindow& window);
 
 	template <typename T>
 	bool assignComponent(EntityID entity);
@@ -36,7 +36,7 @@ public:
 	T& getComponent(EntityID entity);
 
 	void onUpdate();
-	void onDraw();
+	void onRender();
 private:
 	std::unique_ptr<EntityManager> m_entity_manager;
 	std::unique_ptr<ComponentManager> m_component_manager;
@@ -61,9 +61,9 @@ inline void ECSManager::addSystemOnUpdate()
 }
 
 template<typename T>
-inline void ECSManager::addSystemOnDraw(sf::RenderWindow& window)
+inline void ECSManager::addSystemOnRender(sf::RenderWindow& window)
 {
-	m_system_manager->addSystemOnDraw<T>(*this, window);
+	m_system_manager->addSystemOnRender<T>(*this, window);
 }
 
 template<typename T>
@@ -90,7 +90,7 @@ inline bool ECSManager::removeComponent(EntityID entity)
 
 	if (removed) {
 		m_component_manager->removeComponent<T>(entity);
-		m_system_manager->entitySignatureUpdated(entity, m_entity_manager->getSignature(entity);
+		m_system_manager->entitySignatureUpdated(entity, m_entity_manager->getSignature(entity));
 	}
 
 	return removed;

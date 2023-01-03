@@ -7,10 +7,10 @@ void SystemManager::update()
 	}
 }
 
-void SystemManager::draw()
+void SystemManager::render()
 {
-	for (auto& s : m_systems_on_draw) {
-		s->draw();
+	for (auto& s : m_systems_on_render) {
+		s->render();
 	}
 }
 
@@ -22,7 +22,7 @@ void SystemManager::entitySignatureUpdated(EntityID entity, const Signature& sig
 		s->checkForMatching(entity, signature);
 	}
 
-	for (auto& s : m_systems_on_draw) {
+	for (auto& s : m_systems_on_render) {
 		s->checkForMatching(entity, signature);
 	}
 }
@@ -33,7 +33,7 @@ void SystemManager::entityDestroyed(EntityID entity)
 		s->removeEntity(entity);
 	}
 
-	for (auto& s : m_systems_on_draw) {
+	for (auto& s : m_systems_on_render) {
 		s->removeEntity(entity);
 	}
 }

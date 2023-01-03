@@ -9,7 +9,7 @@
 
 #include <cassert>
 
-const size_t MAX_ENTITIES = 30;
+const size_t MAX_ENTITIES = 3;
 
 class EntityManager
 {

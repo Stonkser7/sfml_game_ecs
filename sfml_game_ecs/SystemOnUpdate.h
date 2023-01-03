@@ -13,7 +13,6 @@ public:
 	virtual void update() = 0;
 protected:
 	explicit SystemOnUpdate(ECSManager& manager);
-private:
 	ECSManager& m_ecs_manager;
 };
 

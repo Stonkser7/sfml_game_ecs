@@ -6,6 +6,7 @@ enum ComponentID {
 	Direction,
 	Acceleration,
 	Speed,
+	Sprite,
 
 	Count			//keep it latest
 };

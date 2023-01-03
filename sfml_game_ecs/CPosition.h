@@ -2,4 +2,6 @@
 
 #include <SFML/Graphics.hpp>
 
-using Position = sf::Vector2f;
+struct CPosition {
+	sf::Vector2f vector;
+};
