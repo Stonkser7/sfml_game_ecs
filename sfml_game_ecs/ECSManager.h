@@ -12,7 +12,7 @@
 class ECSManager
 {
 public:
-	ECSManager();
+	void init();
 
 	EntityID createEntity();
 	void destroyEntity(EntityID entity);

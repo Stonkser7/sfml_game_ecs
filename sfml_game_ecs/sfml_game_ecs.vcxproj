@@ -152,6 +152,7 @@
     <ClCompile Include="Direction.cpp" />
     <ClCompile Include="ECSManager.cpp" />
     <ClCompile Include="EntityManager.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="IComponentArray.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MoveSystem.cpp" />
@@ -170,6 +171,7 @@
     <ClInclude Include="ECSManager.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="EntityManager.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="IComponentArray.h" />
     <ClInclude Include="MoveSystem.h" />
     <ClInclude Include="Position.h" />

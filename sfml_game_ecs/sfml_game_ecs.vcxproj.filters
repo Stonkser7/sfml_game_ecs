@@ -13,11 +13,17 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\ECSManagers">
+    <Filter Include="Header Files\ECS">
       <UniqueIdentifier>{93f15718-ffdb-4742-ad2a-fe4f9fdfaca9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\ECSManagers">
+    <Filter Include="Source Files\ECS">
       <UniqueIdentifier>{f89d1e69-fa81-46f1-aaef-a52b795217ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ECS\Managers">
+      <UniqueIdentifier>{e0c7d1ee-fddb-44fc-8bf3-f9a216c672f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ECS\Managers">
+      <UniqueIdentifier>{8965e2cc-a5b0-4d07-8b97-1f47d810c6a7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -30,35 +36,38 @@
     <ClCompile Include="Direction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="EntityManager.cpp">
-      <Filter>Source Files\ECSManagers</Filter>
-    </ClCompile>
-    <ClCompile Include="ComponentManager.cpp">
-      <Filter>Source Files\ECSManagers</Filter>
-    </ClCompile>
     <ClCompile Include="BaseSystem.cpp">
-      <Filter>Source Files\ECSManagers</Filter>
+      <Filter>Source Files\ECS</Filter>
     </ClCompile>
     <ClCompile Include="ComponentArray.cpp">
-      <Filter>Source Files\ECSManagers</Filter>
+      <Filter>Source Files\ECS</Filter>
     </ClCompile>
     <ClCompile Include="IComponentArray.cpp">
-      <Filter>Source Files\ECSManagers</Filter>
-    </ClCompile>
-    <ClCompile Include="SystemManager.cpp">
-      <Filter>Source Files\ECSManagers</Filter>
-    </ClCompile>
-    <ClCompile Include="ECSManager.cpp">
-      <Filter>Source Files\ECSManagers</Filter>
+      <Filter>Source Files\ECS</Filter>
     </ClCompile>
     <ClCompile Include="MoveSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SystemOnDraw.cpp">
-      <Filter>Source Files\ECSManagers</Filter>
+      <Filter>Source Files\ECS</Filter>
     </ClCompile>
     <ClCompile Include="SystemOnUpdate.cpp">
-      <Filter>Source Files\ECSManagers</Filter>
+      <Filter>Source Files\ECS</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentManager.cpp">
+      <Filter>Source Files\ECS\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="ECSManager.cpp">
+      <Filter>Source Files\ECS\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityManager.cpp">
+      <Filter>Source Files\ECS\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemManager.cpp">
+      <Filter>Source Files\ECS\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -80,44 +89,47 @@
     <ClInclude Include="Direction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ComponentManager.h">
-      <Filter>Header Files\ECSManagers</Filter>
-    </ClInclude>
-    <ClInclude Include="EntityManager.h">
-      <Filter>Header Files\ECSManagers</Filter>
-    </ClInclude>
     <ClInclude Include="BaseSystem.h">
-      <Filter>Header Files\ECSManagers</Filter>
+      <Filter>Header Files\ECS</Filter>
     </ClInclude>
     <ClInclude Include="Component.h">
-      <Filter>Header Files\ECSManagers</Filter>
+      <Filter>Header Files\ECS</Filter>
     </ClInclude>
     <ClInclude Include="Entity.h">
-      <Filter>Header Files\ECSManagers</Filter>
+      <Filter>Header Files\ECS</Filter>
     </ClInclude>
     <ClInclude Include="ComponentArray.h">
-      <Filter>Header Files\ECSManagers</Filter>
+      <Filter>Header Files\ECS</Filter>
     </ClInclude>
     <ClInclude Include="IComponentArray.h">
-      <Filter>Header Files\ECSManagers</Filter>
+      <Filter>Header Files\ECS</Filter>
     </ClInclude>
     <ClInclude Include="Signature.h">
-      <Filter>Header Files\ECSManagers</Filter>
-    </ClInclude>
-    <ClInclude Include="SystemManager.h">
-      <Filter>Header Files\ECSManagers</Filter>
-    </ClInclude>
-    <ClInclude Include="ECSManager.h">
-      <Filter>Header Files\ECSManagers</Filter>
+      <Filter>Header Files\ECS</Filter>
     </ClInclude>
     <ClInclude Include="MoveSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SystemOnDraw.h">
-      <Filter>Header Files\ECSManagers</Filter>
+      <Filter>Header Files\ECS</Filter>
     </ClInclude>
     <ClInclude Include="SystemOnUpdate.h">
-      <Filter>Header Files\ECSManagers</Filter>
+      <Filter>Header Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentManager.h">
+      <Filter>Header Files\ECS\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="ECSManager.h">
+      <Filter>Header Files\ECS\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityManager.h">
+      <Filter>Header Files\ECS\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemManager.h">
+      <Filter>Header Files\ECS\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

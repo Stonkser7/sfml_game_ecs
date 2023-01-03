@@ -1,6 +1,7 @@
 #include "ECSManager.h"
 
-ECSManager::ECSManager()
+
+void ECSManager::init()
 {
 	m_entity_manager = std::make_unique<EntityManager>();
 	m_component_manager = std::make_unique<ComponentManager>();
